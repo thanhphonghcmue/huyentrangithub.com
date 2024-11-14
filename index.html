@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập thiết kế web cá nhân </title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4; /* Nền sáng nhẹ */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: linear-gradient(135deg, #ff99cc, #66ccff); /* Nền hội họa với màu sắc sống động */
+            width: 80%;
+            height: 80%;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: white;
+            font-size: 3em;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        .link-container {
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+            z-index: 10;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            background: #ff7e5f;
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        a:active {
+            background: #ff3b2f;
+            transform: scale(1.05);
+        }
+
+        .circle-decoration {
+            position: absolute;
+            top: -10%;
+            right: -10%;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            filter: blur(60px);
+            animation: moveCircle 5s infinite ease-in-out;
+        }
+
+        .info-container {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            z-index: 10;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        .info-container h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .info-container p {
+            font-size: 1.2em;
+        }
+
+        .connector {
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            width: 30px;
+            height: 2px;
+            background-color: #fff;
+            transform: rotate(45deg);
+            z-index: 5;
+        }
+
+        .connector:before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 15px;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+
+        @keyframes moveCircle {
+            0% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(100px) translateY(50px); }
+            100% { transform: translateX(0) translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chào mừng đã đến với trang bài tập cá nhân của tôi !</h1>
+
+        <!-- Khung đường link -->
+        <div class="link-container">
+            <a href="./PhongCV/beba.html">CV cá nhân</a>
+            <a href="demo/fish-aquarium-main (1)/hoca.html">Hồ cá</a>
+        </div>
+
+        <!-- Dây nối -->
+        <div class="connector"></div>
+
+        <!-- Thông tin cá nhân -->
+        <div class="info-container">
+            <h2>Thông tin cá nhân</h2>
+            <p><strong>Họ và tên:</strong> Lâm Thanh Phong</p>
+            <p><strong>MSSV:</strong> 50.01.103.057</p>
+            <p><strong>Khoa</strong> :CNTT</p>
+        </div>
+
+        <div class="circle-decoration"></div>
+    </div>
+    </div>
+</body>
+</html>
